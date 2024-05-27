@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    <h1 class="display-4">String Input</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="inputString">Input the string:</label>
+            <input type="text" class="form-control" id="inputString" name="InputString" placeholder="Enter a string">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.OutputString))
+    {
+        <div class="mt-4">
+            <p>@Model.OutputString</p>
+        </div>
+    }
+</div>
